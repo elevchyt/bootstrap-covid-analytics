@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Analytics | powered by Coronavirus COVID19 API</title>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- HEADING CONTAINER-->
+    <div class="container">
+        <h1 class="text-center">COVID-19 Analytics</h1>
+        <hr>
+
+        <p class="text-center lead">Keep track of COVID-19 daily cases per country</p>
+        
+        <br>
+        <h2 class="text-center" id="total-cases">TOTAL CASES</h2>
+        <h2 class="text-center text-success" id="total-recoveries">TOTAL RECOVERIES</h2>
+        <h2 class="text-center text-danger" id="total-deaths">TOTAL DEATHS</h2>
+        <br>
+        <hr>
+
+        <h2 class="text-center">RESULTS FOR ALL COUNTRIES</h2>
+    </div>
+
+    <!-- DROPDOWN (sort by..) -->
+    <div class="container"> 
+        <label>Sort by</label>
+        <select>
+            <option value="Total Cases">Total Cases</option>
+            <option value="Total Recoveries">Total Recoveries</option>
+            <option value="Total Deaths">Total Deaths</option>
+            <option value="New Cases">New Cases</option>
+            <option value="New Deaths">New Deaths</option>
+        </select>
+    </div>
+
+    <!-- RESULTS ALL COUNTRIES -->
+    <div class="container">
+        
+        <br>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Country</th>
+                    <th>Total Cases</th>
+                    <th>Total Recoveries</th>
+                    <th>Total Deaths</th>
+                    <th>New Cases</th>
+                    <th>New Deaths</th>
+                  </tr>
+            </thead>
+            
+            <tbody id="all-countries-results">
+                
+            </tbody>
+        </table>
+    </div>
+
+    <!-- FOOTER -->
+    <hr>
+    <div class="text-center" style="margin-bottom: 18px;">
+        <a class="text-primary" target="_blank" href="https://github.com/elevchyt">github.com/elevchyt</a>
+    </div>
+
+    <!-- api (main js) -->
+    <script src="app.js"></script>
+</body>
+</html>
